@@ -6,6 +6,7 @@ import prettierPlugin from 'eslint-plugin-prettier';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   ...tseslint.configs.recommended,
+  pluginJs.configs.recommended,
   {
     files: ['packages/**/*.{js,ts,mjs,jsx,tsx}'],
     plugins: {
@@ -25,5 +26,5 @@ export default [
     },
   },
   { languageOptions: { globals: globals.browser } },
-  pluginJs.configs.recommended,
 ];
+
