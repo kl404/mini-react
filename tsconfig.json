@@ -15,7 +15,8 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "allowJs": true,
-    "checkJs": true
+    "checkJs": true,
+    "baseUrl": "./packages"
   },
   "include": ["packages/**/*.js", "packages/**/*.ts", "packages/**/*.tsx"]
 } 

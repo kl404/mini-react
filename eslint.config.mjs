@@ -5,26 +5,26 @@ import prettierPlugin from 'eslint-plugin-prettier';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  ...tseslint.configs.recommended,
-  pluginJs.configs.recommended,
-  {
-    files: ['packages/**/*.{js,ts,mjs,jsx,tsx}'],
-    plugins: {
-      prettier: prettierPlugin,
-      '@typescript-eslint': tseslint.plugin,
-    },
-    languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: {
-        project: true,
-      },
-    },
-    rules: {
-      'prettier/prettier': 'error',
-      '@typescript-eslint/no-unused-vars': 'off',
-      'no-unused-vars': 'off'
-    },
-  },
-  { languageOptions: { globals: globals.browser } },
+	...tseslint.configs.recommended,
+	pluginJs.configs.recommended,
+	{
+		files: ['packages/**/*.{js,ts,mjs,jsx,tsx}'],
+		plugins: {
+			prettier: prettierPlugin,
+			'@typescript-eslint': tseslint.plugin
+		},
+		languageOptions: {
+			parser: tseslint.parser,
+			parserOptions: {
+				project: true
+			}
+		},
+		rules: {
+			'prettier/prettier': 'error',
+			'@typescript-eslint/no-unused-vars': 'off',
+			'no-unused-vars': 'off',
+			'@typescript-eslint/no-explicit-any': 'off'
+		}
+	},
+	{ languageOptions: { globals: globals.browser } }
 ];
-

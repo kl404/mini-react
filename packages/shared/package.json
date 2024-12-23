@@ -1,0 +1,8 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "所有公有辅助方法以及类型定义，他不需要入口文件，只需要被其他包引用",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
